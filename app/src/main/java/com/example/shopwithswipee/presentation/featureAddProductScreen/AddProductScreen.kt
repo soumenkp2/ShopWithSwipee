@@ -97,7 +97,9 @@ class AddProductScreen(private val dismissCallback: dismissCallback) : BottomShe
     private fun initObservers() {
         viewModel.addProductResponse.observe(viewLifecycleOwner) {
             if (it.success) {
+                binding?.progressBar?.visibility = View.GONE
                 dismissCallback.onFragmentDismissed(true)
+                Toast.makeText(context, "Your product has been added", Toast.LENGTH_SHORT).show()
                 dismiss()
             }
         }
@@ -133,7 +135,8 @@ class AddProductScreen(private val dismissCallback: dismissCallback) : BottomShe
                     )
                 )
 
-                Toast.makeText(context, "Your product has been added", Toast.LENGTH_SHORT).show()
+                binding?.progressBar?.visibility = View.VISIBLE
+
             } else {
                 Snackbar.make(binding!!.root, "Fill all the fields", Snackbar.LENGTH_SHORT).show()
             }
