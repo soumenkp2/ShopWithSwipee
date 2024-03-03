@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ShopWithSwipee</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="swipe_your_products">Swipe your Products</string>
+    <string name="swipee_products">Swipee Products</string>
+    <string name="product_name">Product Name</string>
+    <string name="selling_price">Selling Price</string>
+    <string name="tax_rate">Tax Rate</string>
+    <string name="submit">Submit</string>
+</resources>

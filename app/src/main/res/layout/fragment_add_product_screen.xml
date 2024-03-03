@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.featureAddProductScreen.AddProductScreen">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:id="@+id/imageProduct"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="200dp"
+                android:src="@drawable/defaultproduct"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/addImageProduct"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="200dp"
+                android:src="@drawable/addpic"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="visible" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Spinner
+            android:id="@+id/spinnerProductType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editTextProductName"
+            android:fontFamily="@font/poppins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name" />
+
+        <EditText
+            android:id="@+id/editTextSellingPrice"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/poppins"
+            android:layout_height="wrap_content"
+            android:hint="Selling Price"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editTextTaxRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:hint="Tax Rate"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:textSize="20sp"
+            android:clickable="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Submit"
+            android:focusable="true" />
+    </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
